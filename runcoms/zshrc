@@ -11,3 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Environment variables
+export TERMINAL='gnome-terminal'
+export EDITOR='gvim'
+
+# Aliases
+alias mkdir='mkdir -p'
+alias rm='trash'
+alias vim='gvim -v'
+alias nmcli='nmcli -p'
