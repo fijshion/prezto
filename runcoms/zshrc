@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 # Environment variables
-export TERMINAL='gnome-terminal'
+export TERMINAL='urxvt256c-ml'
 export EDITOR='gvim'
 
 # Aliases
@@ -21,3 +21,12 @@ alias mkdir='mkdir -p'
 alias rm='trash'
 alias vim='gvim -v'
 alias nmcli='nmcli -p'
+setopt extended_glob
+
+# kill completion
+zstyle ':completion:*:processes' command 'ps -au$USER' 
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;32'
+# killall completion
+zstyle ':completion:*:processes-names' command 'ps -e -o comm='
+
+source ~/.local.rc
